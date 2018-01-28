@@ -36,5 +36,12 @@
   padding:30px;
 }
 .paper h2 {
-  padding-top: 10px;
+  padding-top: 30px;
 }
+.display-upload-container button {
+  color: rgba(255, 255, 255, 1) ;
+  background-color: #2196f3 ;
+}
+.display-upload-container button:hover {
+  background-color: #1976d2 ;
+ }

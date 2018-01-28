@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dropzone from 'react-dropzone';
 import Button from 'material-ui/Button';
+import { withStyles } from 'material-ui/styles';
 import Spinner from '../spinner/spinner';
 import ControlledExpansionPanels from '../ControlledExpansionPanels/ControlledExpansionPanels';
 import Paper from 'material-ui/Paper';
-import './fileUpload.css'
+import './fileUpload.css';
+
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
 
 class fileUpload extends Component {
   constructor(props){
@@ -53,21 +63,31 @@ class fileUpload extends Component {
    }
  }
 
+ renderUploadButton(filesPreview, classes) {
+   return(
+     <div>
+      <div className="selected-file-name">
+        Selected File : {filesPreview}
+      </div>
+      <div className='display-upload-container'>
+        <Button raised color="primary" className={classes.button}  primary={true} onClick={(event) => this.handleClick(event)}>Upload File</Button>
+      </div>
+    </div>
+   );
+ }
+
  render() {
+  const { classes } = this.props;
     return (
       <div className="file-upload-component">
         <center>
           <Dropzone className = 'drag-drop-area' onDrop={(files) => this.onDrop(files)}>
                 <p class='place-holder'>Try dropping some files here, or click to select files to upload.</p>
           </Dropzone>
-          <div className="selected-file-name">
-            File to be uploaded : {this.state.filesPreview}
-          </div>
+
         </center>
         <MuiThemeProvider>
-          <div className='display-upload-container'>
-            <Button raised color="primary" label="Upload File" primary={true} onClick={(event) => this.handleClick(event)}/>
-          </div>
+        { this.state.filesPreview.length > 0 && this.renderUploadButton(this.state.filesPreview, classes) }
         </MuiThemeProvider>
         {this.state.showSpinner && <Spinner />}
         {this.state.isLoaded && <div className='paper'>
@@ -84,4 +104,4 @@ class fileUpload extends Component {
   }
 }
 
-export default fileUpload; // Don’t forget to use export default!
+export default withStyles(styles)(fileUpload); // Don’t forget to use export default!
