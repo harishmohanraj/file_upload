@@ -3,8 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Dropzone from 'react-dropzone';
 import Button from 'material-ui/Button';
 import Spinner from '../spinner/spinner';
-import ControlledExpansionPanels from '../accordion/accordion';
-
+import ControlledExpansionPanels from '../ControlledExpansionPanels/ControlledExpansionPanels';
+import Paper from 'material-ui/Paper';
 import './fileUpload.css'
 
 class fileUpload extends Component {
@@ -68,8 +68,14 @@ class fileUpload extends Component {
           </div>
         </MuiThemeProvider>
         {this.state.showSpinner && <Spinner />}
-        <Spinner />
-        <ControlledExpansionPanels/>
+        <div className='paper'>
+          <Paper elevation={10}>
+          <h2>
+            Predictions:
+          </h2>
+            <ControlledExpansionPanels/>
+          </Paper>
+        </div>
       </div>
     );
   }

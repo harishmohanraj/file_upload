@@ -26,3 +26,17 @@
   display: inline-block;
   margin-left: 20px;
 }
+
+.paper {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.paper > .MuiPaper-root-24 {
+  padding:30px;
+}
+
+h2 {
+  text-align: left;
+  margin: 20px 30px
+}
