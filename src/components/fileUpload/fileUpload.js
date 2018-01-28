@@ -15,6 +15,7 @@ class fileUpload extends Component {
       filesToBeSent:[],
       printcount:1,
       showSpinner: false,
+      isLoaded: false,
     }
   }
 
@@ -45,7 +46,8 @@ class fileUpload extends Component {
      })
      setTimeout(() => {
       this.setState({
-        showSpinner: false
+        showSpinner: false,
+        isLoaded: true
        })
      }, 2000)
    }
@@ -68,14 +70,15 @@ class fileUpload extends Component {
           </div>
         </MuiThemeProvider>
         {this.state.showSpinner && <Spinner />}
-        <div className='paper'>
+        {this.state.isLoaded && <div className='paper'>
           <Paper elevation={10}>
           <h2>
-            Predictions:
+            Predictions
           </h2>
             <ControlledExpansionPanels/>
           </Paper>
         </div>
+      }
       </div>
     );
   }

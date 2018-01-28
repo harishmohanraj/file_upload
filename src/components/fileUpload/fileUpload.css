@@ -35,8 +35,6 @@
 .paper > .MuiPaper-root-24 {
   padding:30px;
 }
-
-h2 {
-  text-align: left;
-  margin: 20px 30px
+.paper h2 {
+  padding-top: 10px;
 }
