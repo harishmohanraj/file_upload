@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FileUpload from './components/fileUpload/fileUpload'
 import logo from './logo.svg';
 import './App.css';
+import 'typeface-roboto'
 
 class App extends Component {
   render() {

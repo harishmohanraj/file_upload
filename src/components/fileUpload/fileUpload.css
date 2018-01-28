@@ -1,0 +1,28 @@
+.file-upload-component .drag-drop-area {
+  width: 50%;
+  height: 100px;
+  border-width: 2px;
+  border-color: rgb(102, 102, 102);
+  border-style: dashed;
+  border-radius: 5px;
+}
+
+.file-upload-component .drag-drop-area .place-holder {
+  margin: 38px auto;
+}
+.selected-file-name {
+  margin:20px auto;
+}
+.selected-file-name > div {
+  display: inline-block;
+}
+
+.selected-file-name > div > a > span{
+  font-size: 15px !important;
+  margin-left: 10px;
+}
+
+.display-upload-file {
+  display: inline-block;
+  margin-left: 20px;
+}
