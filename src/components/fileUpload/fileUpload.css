@@ -45,3 +45,7 @@
 .display-upload-container button:hover {
   background-color: #1976d2 ;
  }
+
+ .paper .panel-details {
+  margin-left: 123px;
+}

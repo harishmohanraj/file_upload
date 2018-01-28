@@ -17,14 +17,35 @@ const styles = theme => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    flexBasis: '33.33%',
-    flexShrink: 0,
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
   },
+  icon: {
+    verticalAlign: 'bottom',
+    height: 20,
+    width: 20,
+  },
+  details: {
+    alignItems: 'center',
+  },
+  column: {
+    flexBasis: '33.3%',
+  },
+  helper: {
+    borderLeft: `2px solid ${theme.palette.divider}`,
+    padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+  },
+  link: {
+    color: theme.palette.primary.main,
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
 });
+
 
 class ControlledExpansionPanels extends React.Component {
   state = {
@@ -43,13 +64,23 @@ class ControlledExpansionPanels extends React.Component {
       arr.push(
         <ExpansionPanel expanded={expanded === 'panel'+i} onChange={this.handleChange('panel'+i)}>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography className={classes.heading}>Email {i}</Typography>
-              <Typography className={classes.secondaryHeading}>Class B</Typography>
+              <div className={classes.column}>
+                <Typography className={classes.heading}>Email {i} Subject</Typography>
+              </div>
+              <div className={classes.column}>
+                <Typography className={classes.secondaryHeading}>Class B</Typography>
+              </div>
+              {/* <div className={classes.column}>
+                <Typography className={classes.secondaryHeading}>Keywords</Typography>
+              </div> */}
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography align='center'>
-                The reason goes here...
-              </Typography>
+              <div className='panel-details'>
+                <Typography type='body2' align='left'>
+                  Complete Email<br/><br />
+                  Keywords: loan, mortgage, APR, Personal Loan
+                </Typography>
+              </div>
             </ExpansionPanelDetails>
           </ExpansionPanel>
       )
