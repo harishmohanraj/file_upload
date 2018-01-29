@@ -90,7 +90,7 @@ class fileUpload extends Component {
         { this.state.filesPreview.length > 0 && this.renderUploadButton(this.state.filesPreview, classes) }
         </MuiThemeProvider>
         {this.state.showSpinner && <Spinner />}
-        {this.state.isLoaded && <div className='paper'>
+        {!this.state.showSpinner && this.state.isLoaded && <div className='paper'>
           <Paper elevation={10}>
           <h2>
             Predictions
