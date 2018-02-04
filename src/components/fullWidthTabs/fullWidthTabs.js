@@ -5,6 +5,7 @@ import SwipeableViews from 'react-swipeable-views';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
+import SimpleTable from '../simpleTable/simpleTable';
 
 function TabContainer({ children, dir }) {
   return (
@@ -52,11 +53,11 @@ class FullWidthTabs extends React.Component {
             fullWidth
             centered
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
-            <Tab label="Item Four" />
-            <Tab label="Item Five" />
+            <Tab label="Class A" />
+            <Tab label="Class B" />
+            <Tab label="Class C" />
+            <Tab label="Class D" />
+            <Tab label="Class E" />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -64,11 +65,11 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}>Item One</TabContainer>
-          <TabContainer dir={theme.direction}>Item Two</TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
-          <TabContainer dir={theme.direction}>Item Four</TabContainer>
-          <TabContainer dir={theme.direction}>Item Five</TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
         </SwipeableViews>
       </div>
     );
