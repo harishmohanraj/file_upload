@@ -6,7 +6,6 @@ import { withStyles } from 'material-ui/styles';
 import Spinner from '../spinner/spinner';
 import ControlledExpansionPanels from '../ControlledExpansionPanels/ControlledExpansionPanels';
 import Paper from 'material-ui/Paper';
-import SimpleModal from '../simpleModal/simpleModal';
 import './fileUpload.css';
 
 const styles = theme => ({
@@ -100,7 +99,6 @@ class fileUpload extends Component {
           </Paper>
         </div>
       }
-      <SimpleModal />
       </div>
     );
   }

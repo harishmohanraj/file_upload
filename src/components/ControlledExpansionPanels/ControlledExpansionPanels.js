@@ -8,6 +8,7 @@ import ExpansionPanel, {
 import Typography from 'material-ui/Typography';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import SimpleModal from '../simpleModal/simpleModal';
 import './ControlledExpansionPanels.css';
 
 
@@ -80,6 +81,7 @@ class ControlledExpansionPanels extends React.Component {
                   Complete Email<br/><br />
                   Keywords: loan, mortgage, APR, Personal Loan
                 </Typography>
+                <SimpleModal />
               </div>
             </ExpansionPanelDetails>
           </ExpansionPanel>

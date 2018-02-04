@@ -15,12 +15,6 @@ const styles = theme => ({
   },
 });
 
-let id = 0;
-function createData(name, calories, fat, carbs, protein, a, b, c) {
-  id += 1;
-  return { id, name, calories, fat, carbs, protein, a, b, c };
-}
-
 function SimpleTable(props) {
   const { classes, data } = props;
 
