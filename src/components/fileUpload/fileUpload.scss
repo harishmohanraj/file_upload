@@ -1,0 +1,65 @@
+.file-upload-component {
+
+  .drag-drop-area {
+    width: 50%;
+    height: 100px;
+    border-width: 2px;
+    border-color: rgb(102, 102, 102);
+    border-style: dashed;
+    border-radius: 5px;
+
+    .place-holder {
+      margin: 38px auto;
+    }
+  }
+}
+
+.selected-file-name {
+  margin:20px auto;
+
+  & > div {
+    display: inline-block;
+    & > a > span{
+      font-size: 15px !important;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+.display-upload-file {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.paper {
+  width: 80%;
+  margin: 50px auto;
+
+  .MuiPaper-root-24 {
+    padding:30px;
+  }
+
+  h2 {
+    padding-top: 30px;
+  }
+
+  .panel-details {
+    margin-left: 123px;
+  }
+}
+
+.display-upload-container {
+  button {
+    color: rgba(255, 255, 255, 1) ;
+    background-color: #2196f3 ;
+
+    &:hover {
+      background-color: #1976d2 ;
+     }
+  }
+}
+
+.MuiCircularProgress-colorPrimary-27 {
+  color: #1976d2 !important;
+}
