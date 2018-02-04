@@ -15,6 +15,12 @@ function TabContainer({ children, dir }) {
   );
 }
 
+let id = 0;
+function createData(name, calories, fat, carbs, protein, a, b, c) {
+  id += 1;
+  return { id, name, calories, fat, carbs, protein, a, b, c };
+}
+
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
   dir: PropTypes.string.isRequired,
@@ -25,6 +31,22 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper
   },
 });
+
+const data = [
+  createData('Loan', 'Lending','Loan', 'B', 'Lloyds','Loan', 'Halifax', 'Lending'),
+  createData('APR', 'Lending', 'C', 'Halifax', 'Lloyds','Loan', 'Loan', 'APR'),
+  createData('Lending', 'D', '16.0', 'Lending','Loan', '6.0', 'Halifax', 'A'),
+  createData('Lloyds', 'Halifax', '3.7', 'Lloyds', '4.3','Loan', 'Lending', 'APR'),
+  createData('Halifax', 'Loan', 'Lending', '49', 'Lloyds','Loan', 'Lending', 'Loan'),
+];
+
+const data_2 = [
+  createData('Class B', 'Lending','Loan', 'B', 'Lloyds','Loan', 'Halifax', 'Lending'),
+  createData('APR', 'Lending', 'C', 'Halifax', 'Lloyds','Loan', 'Loan', 'APR'),
+  createData('Lending', 'D', '16.0', 'Lending','Loan', '6.0', 'Halifax', 'A'),
+  createData('Lloyds', 'Halifax', '3.7', 'Lloyds', '4.3','Loan', 'Lending', 'APR'),
+  createData('Halifax', 'Loan', 'Lending', '49', 'Lloyds','Loan', 'Lending', 'Loan'),
+];
 
 class FullWidthTabs extends React.Component {
   state = {
@@ -65,11 +87,11 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable data={data_2}/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
         </SwipeableViews>
       </div>
     );

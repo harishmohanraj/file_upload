@@ -16,21 +16,13 @@ const styles = theme => ({
 });
 
 let id = 0;
-function createData(name, calories, fat, carbs, protein) {
+function createData(name, calories, fat, carbs, protein, a, b, c) {
   id += 1;
-  return { id, name, calories, fat, carbs, protein };
+  return { id, name, calories, fat, carbs, protein, a, b, c };
 }
 
-const data = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
 function SimpleTable(props) {
-  const { classes } = props;
+  const { classes, data } = props;
 
   return (
     <Paper className={classes.root}>
@@ -44,6 +36,9 @@ function SimpleTable(props) {
                 <TableCell numeric>{n.fat}</TableCell>
                 <TableCell numeric>{n.carbs}</TableCell>
                 <TableCell numeric>{n.protein}</TableCell>
+                <TableCell numeric>{n.a}</TableCell>
+                <TableCell numeric>{n.b}</TableCell>
+                <TableCell numeric>{n.c}</TableCell>
               </TableRow>
             );
           })}
