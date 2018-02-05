@@ -24,6 +24,10 @@
 .selected-file-name {
   margin:43px auto 16px;
 
+  strong {
+    display: inline-block;
+  }
+
   & > div {
     display: inline-block;
     & > a > span{
@@ -52,7 +56,27 @@
   }
 
   .panel-details {
-    margin-left: 123px;
+    margin-left: 53px;
+
+    & > span {
+      font-size: 0.85rem;
+      span {
+        color: $primary-color;
+        font-weight: bolder;
+      }
+    }
+
+    & > div {
+      text-align: left;
+      margin-left: -24px;
+
+      & > button {
+        color: $primary-color;
+        font-size: 0.72rem;
+        text-decoration: underline;
+        font-weight: bolder;
+      }
+    }
   }
 }
 

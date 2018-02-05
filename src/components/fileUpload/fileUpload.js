@@ -10,6 +10,7 @@ import FileUpload from 'material-ui-icons/FileUpload';
 import Icon from 'material-ui/Icon';
 import IconButton from 'material-ui/IconButton';
 import uploadLogo from '../../assets/img/cloud-upload.png';
+import Delete from 'material-ui-icons/Delete';
 
 import './fileUpload.css';
 
@@ -85,15 +86,16 @@ class fileUpload extends Component {
    return(
      <div className="drag-drop-area upload">
       <div className="selected-file-name">
-        Selected File : {filesPreview}
+        Selected File : <strong>{filesPreview}</strong>
       </div>
       <div className='display-upload-container'>
       <Button className={classes.button} raised color="default" onClick={(event) => this.handleClick(event)}>
         Upload
         <FileUpload className={classes.rightIcon} />
       </Button>
-      <Button className={classes.button} raised color="default" onClick={(event) => this.cancelClickHandle()}>
-        Cancel
+      <Button className={classes.button} raised variant="raised" color="secondary" onClick={(event) => this.cancelClickHandle()}>
+        Reset
+        <Delete className={classes.rightIcon} />
       </Button>
       </div>
     </div>
@@ -106,7 +108,7 @@ class fileUpload extends Component {
       <div className="file-upload-component">
         <center>
           {(this.state.filesPreview.length === 0 || this.state.isLoaded )&& <Dropzone className = 'drag-drop-area' onDrop={(files) => this.onDrop(files)}>
-                <p class='place-holder'>Drag a file, or browse to upload</p>
+                <p class='place-holder'><strong>Drag a file, or browse to upload</strong></p>
                 <IconButton color="secondary" className={classes.button} aria-label="Add an alarm">
                 <img src={uploadLogo} alt="uploadLogo" />
                 </IconButton>

@@ -39,6 +39,8 @@ body {
 
 .selected-file-name {
   margin: 43px auto 16px; }
+  .selected-file-name strong {
+    display: inline-block; }
   .selected-file-name > div {
     display: inline-block; }
     .selected-file-name > div > a > span {
@@ -57,7 +59,20 @@ body {
   .paper h2 {
     padding-top: 30px; }
   .paper .panel-details {
-    margin-left: 123px; }
+    margin-left: 53px; }
+    .paper .panel-details > span {
+      font-size: 0.85rem; }
+      .paper .panel-details > span span {
+        color: #006A4D;
+        font-weight: bolder; }
+    .paper .panel-details > div {
+      text-align: left;
+      margin-left: -24px; }
+      .paper .panel-details > div > button {
+        color: #006A4D;
+        font-size: 0.72rem;
+        text-decoration: underline;
+        font-weight: bolder; }
 
 .display-upload-container button {
   color: white;

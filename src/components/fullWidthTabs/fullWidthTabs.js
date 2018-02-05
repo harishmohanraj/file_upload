@@ -6,6 +6,13 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import SimpleTable from '../simpleTable/simpleTable';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#006A4D' }
+  },
+});
 
 function TabContainer({ children, dir }) {
   return (
@@ -65,35 +72,37 @@ class FullWidthTabs extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            fullWidth
-            centered
+      <MuiThemeProvider theme={theme}>
+        <div className={classes.root}>
+          <AppBar position="static" color="default">
+            <Tabs
+              value={this.state.value}
+              onChange={this.handleChange}
+              indicatorColor="#006A4D"
+              textColor="#006A4D"
+              fullWidth
+              centered
+            >
+              <Tab label="Class A" />
+              <Tab label="Class B" />
+              <Tab label="Class C" />
+              <Tab label="Class D" />
+              <Tab label="Class E" />
+            </Tabs>
+          </AppBar>
+          <SwipeableViews
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            index={this.state.value}
+            onChangeIndex={this.handleChangeIndex}
           >
-            <Tab label="Class A" />
-            <Tab label="Class B" />
-            <Tab label="Class C" />
-            <Tab label="Class D" />
-            <Tab label="Class E" />
-          </Tabs>
-        </AppBar>
-        <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={this.state.value}
-          onChangeIndex={this.handleChangeIndex}
-        >
-          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable data={data_2}/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
-          <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
-        </SwipeableViews>
-      </div>
+            <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+            <TabContainer dir={theme.direction}><SimpleTable data={data_2}/></TabContainer>
+            <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+            <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+            <TabContainer dir={theme.direction}><SimpleTable data={data}/></TabContainer>
+          </SwipeableViews>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

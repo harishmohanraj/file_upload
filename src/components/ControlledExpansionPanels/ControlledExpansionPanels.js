@@ -77,10 +77,10 @@ class ControlledExpansionPanels extends React.Component {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <div className='panel-details'>
-                <Typography type='body2' align='left'>
+                <Typography type='caption' align='left'>
                 Bonjour,
-                I wanted to share some very exciting news about our organization in Asia Pacific.
-                As I told you a few months ago during the 100 Days WebEx, we launched a country leadership model in Greater China, managed through a Groupe Leadership Team (GLT) and led by Loris Nold as Executive Sponsor.
+                I wanted to share some very <span>exciting</span> news about our <span>organization</span> in Asia Pacific.
+                As I told you a few months ago during the <span>100 Days</span> WebEx, we launched a country leadership model in Greater China, managed through a <span>Groupe Leadership Team</span> (GLT) and led by <span>Loris Nold</span> as Executive Sponsor.
                 <br/><br />
                 </Typography>
                 <SimpleModal />
