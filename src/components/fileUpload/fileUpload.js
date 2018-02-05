@@ -6,6 +6,11 @@ import { withStyles } from 'material-ui/styles';
 import Spinner from '../spinner/spinner';
 import ControlledExpansionPanels from '../ControlledExpansionPanels/ControlledExpansionPanels';
 import Paper from 'material-ui/Paper';
+import FileUpload from 'material-ui-icons/FileUpload';
+import Icon from 'material-ui/Icon';
+import IconButton from 'material-ui/IconButton';
+import uploadLogo from '../../assets/img/cloud-upload.png';
+
 import './fileUpload.css';
 
 const styles = theme => ({
@@ -14,6 +19,9 @@ const styles = theme => ({
   },
   input: {
     display: 'none',
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
   },
 });
 
@@ -70,7 +78,10 @@ class fileUpload extends Component {
         Selected File : {filesPreview}
       </div>
       <div className='display-upload-container'>
-        <Button raised color="primary" className={classes.button}  primary={true} onClick={(event) => this.handleClick(event)}>Upload File</Button>
+      <Button className={classes.button} raised color="default" onClick={(event) => this.handleClick(event)}>
+        Upload
+        <FileUpload className={classes.rightIcon} />
+      </Button>
       </div>
     </div>
    );
@@ -82,9 +93,11 @@ class fileUpload extends Component {
       <div className="file-upload-component">
         <center>
           <Dropzone className = 'drag-drop-area' onDrop={(files) => this.onDrop(files)}>
-                <p class='place-holder'>Try dropping some files here, or click to select files to upload.</p>
+                <p class='place-holder'>Drag a file, or browse to upload</p>
+                <IconButton color="secondary" className={classes.button} aria-label="Add an alarm">
+                <img src={uploadLogo} alt="uploadLogo" />
+                </IconButton>
           </Dropzone>
-
         </center>
         <MuiThemeProvider>
         { this.state.filesPreview.length > 0 && this.renderUploadButton(this.state.filesPreview, classes) }

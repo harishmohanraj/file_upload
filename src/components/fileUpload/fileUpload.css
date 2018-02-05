@@ -1,12 +1,39 @@
+body {
+  background-color: #EFEDEA; }
+
+.App {
+  text-align: center; }
+
+.App-header {
+  background-color: #006A4D;
+  height: 70px;
+  padding: 20px;
+  color: white;
+  text-align: left; }
+
+.App-title {
+  font-size: 1.5em;
+  margin-top: 20px; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 .file-upload-component .drag-drop-area {
-  width: 50%;
-  height: 100px;
+  width: 25%;
+  height: 170px;
   border-width: 2px;
   border-color: #666666;
   border-style: dashed;
-  border-radius: 5px; }
+  border-radius: 5px;
+  cursor: pointer; }
   .file-upload-component .drag-drop-area .place-holder {
-    margin: 38px auto; }
+    margin: 46px auto 0px; }
 
 .selected-file-name {
   margin: 20px auto; }
@@ -32,9 +59,9 @@
 
 .display-upload-container button {
   color: white;
-  background-color: #2196f3; }
+  background-color: #006A4D; }
   .display-upload-container button:hover {
-    background-color: #1976d2; }
+    background-color: #649C00; }
 
 .MuiCircularProgress-colorPrimary-27 {
-  color: #1976d2 !important; }
+  color: #006A4D !important; }

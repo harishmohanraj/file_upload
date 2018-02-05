@@ -1,15 +1,18 @@
+@import '../../App.scss';
+
 .file-upload-component {
 
   .drag-drop-area {
-    width: 50%;
-    height: 100px;
+    width: 25%;
+    height: 170px;
     border-width: 2px;
     border-color: rgb(102, 102, 102);
     border-style: dashed;
     border-radius: 5px;
+    cursor: pointer;
 
     .place-holder {
-      margin: 38px auto;
+      margin: 46px auto 0px;
     }
   }
 }
@@ -52,14 +55,14 @@
 .display-upload-container {
   button {
     color: rgba(255, 255, 255, 1) ;
-    background-color: #2196f3 ;
+    background-color: $primary-color;
 
     &:hover {
-      background-color: #1976d2 ;
+      background-color: $primary-hover ;
      }
   }
 }
 
 .MuiCircularProgress-colorPrimary-27 {
-  color: #1976d2 !important;
+  color: $primary-color !important;
 }

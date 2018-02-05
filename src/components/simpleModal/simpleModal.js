@@ -30,6 +30,9 @@ const styles = theme => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
   },
+  button: {
+    margin: theme.spacing.unit,
+  },
 });
 
 class SimpleModal extends React.Component {
@@ -50,7 +53,7 @@ class SimpleModal extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.handleOpen}>List all words</Button>
+        <Button color="primary" className={classes.button} onClick={this.handleOpen}>List all words</Button>
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"

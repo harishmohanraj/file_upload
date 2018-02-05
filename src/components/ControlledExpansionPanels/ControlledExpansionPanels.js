@@ -66,7 +66,7 @@ class ControlledExpansionPanels extends React.Component {
         <ExpansionPanel expanded={expanded === 'panel'+i} onChange={this.handleChange('panel'+i)}>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
               <div className={classes.column}>
-                <Typography className={classes.heading}>Email {i} Subject</Typography>
+                <Typography className={classes.heading}>Publicis Groupe Leadership in APAC</Typography>
               </div>
               <div className={classes.column}>
                 <Typography className={classes.secondaryHeading}>Class B</Typography>
@@ -78,8 +78,10 @@ class ControlledExpansionPanels extends React.Component {
             <ExpansionPanelDetails>
               <div className='panel-details'>
                 <Typography type='body2' align='left'>
-                  Complete Email<br/><br />
-                  Keywords: loan, mortgage, APR, Personal Loan
+                Bonjour,
+                I wanted to share some very exciting news about our organization in Asia Pacific.
+                As I told you a few months ago during the 100 Days WebEx, we launched a country leadership model in Greater China, managed through a Groupe Leadership Team (GLT) and led by Loris Nold as Executive Sponsor.
+                <br/><br />
                 </Typography>
                 <SimpleModal />
               </div>
