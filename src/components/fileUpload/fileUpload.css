@@ -32,11 +32,13 @@ body {
   border-style: dashed;
   border-radius: 5px;
   cursor: pointer; }
+  .file-upload-component .drag-drop-area.upload {
+    cursor: auto; }
   .file-upload-component .drag-drop-area .place-holder {
     margin: 46px auto 0px; }
 
 .selected-file-name {
-  margin: 20px auto; }
+  margin: 43px auto 16px; }
   .selected-file-name > div {
     display: inline-block; }
     .selected-file-name > div > a > span {

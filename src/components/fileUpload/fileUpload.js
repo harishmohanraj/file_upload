@@ -38,6 +38,10 @@ class fileUpload extends Component {
   }
 
   onDrop(acceptedFiles) {
+    this.setState({
+      isLoaded: false
+    });
+
     var filesToBeSent=this.state.filesToBeSent;
     if(filesToBeSent.length < this.state.printcount){
       filesToBeSent.push(acceptedFiles);
@@ -71,9 +75,15 @@ class fileUpload extends Component {
    }
  }
 
+ cancelClickHandle() {
+  this.setState({
+    filesPreview: []
+  });
+ }
+
  renderUploadButton(filesPreview, classes) {
    return(
-     <div>
+     <div className="drag-drop-area upload">
       <div className="selected-file-name">
         Selected File : {filesPreview}
       </div>
@@ -81,6 +91,9 @@ class fileUpload extends Component {
       <Button className={classes.button} raised color="default" onClick={(event) => this.handleClick(event)}>
         Upload
         <FileUpload className={classes.rightIcon} />
+      </Button>
+      <Button className={classes.button} raised color="default" onClick={(event) => this.cancelClickHandle()}>
+        Cancel
       </Button>
       </div>
     </div>
@@ -92,16 +105,16 @@ class fileUpload extends Component {
     return (
       <div className="file-upload-component">
         <center>
-          <Dropzone className = 'drag-drop-area' onDrop={(files) => this.onDrop(files)}>
+          {(this.state.filesPreview.length === 0 || this.state.isLoaded )&& <Dropzone className = 'drag-drop-area' onDrop={(files) => this.onDrop(files)}>
                 <p class='place-holder'>Drag a file, or browse to upload</p>
                 <IconButton color="secondary" className={classes.button} aria-label="Add an alarm">
                 <img src={uploadLogo} alt="uploadLogo" />
                 </IconButton>
-          </Dropzone>
+          </Dropzone>}
+          <MuiThemeProvider>
+            { this.state.filesPreview.length > 0 && !this.state.isLoaded && this.renderUploadButton(this.state.filesPreview, classes) }
+          </MuiThemeProvider>
         </center>
-        <MuiThemeProvider>
-        { this.state.filesPreview.length > 0 && this.renderUploadButton(this.state.filesPreview, classes) }
-        </MuiThemeProvider>
         {this.state.showSpinner && <Spinner />}
         {!this.state.showSpinner && this.state.isLoaded && <div className='paper'>
           <Paper elevation={10}>

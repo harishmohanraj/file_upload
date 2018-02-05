@@ -11,6 +11,10 @@
     border-radius: 5px;
     cursor: pointer;
 
+    &.upload {
+      cursor: auto;
+    }
+
     .place-holder {
       margin: 46px auto 0px;
     }
@@ -18,7 +22,7 @@
 }
 
 .selected-file-name {
-  margin:20px auto;
+  margin:43px auto 16px;
 
   & > div {
     display: inline-block;
