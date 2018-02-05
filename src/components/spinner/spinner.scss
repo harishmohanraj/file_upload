@@ -1,3 +1,7 @@
+@import '../../App.scss';
 .overlay {
   margin-top:50px;
+  & > div {
+    color: $primary-color;
+  }
 }
