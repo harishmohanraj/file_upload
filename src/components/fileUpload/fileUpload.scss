@@ -58,6 +58,11 @@
   .panel-details {
     margin-left: 53px;
 
+    & > .sub-header {
+      margin: 15px 0px 5px 0px;
+      text-decoration: underline;
+    }
+
     & > span {
       font-size: 0.85rem;
       span {
@@ -75,6 +80,22 @@
         font-size: 0.72rem;
         text-decoration: underline;
         font-weight: bolder;
+      }
+    }
+    & > .badge {
+      margin: 9px -3px 0px -30px;
+      & > span {
+        p {
+          font-size: 0.75rem;
+        }
+        & > span:last-child {
+          background-color: $primary-color;
+          color: #fff;
+          top: -11px;
+          width: 19px;
+          right: -4px;
+          height: 19px;
+        }
       }
     }
   }
