@@ -11,6 +11,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SimpleModal from '../simpleModal/simpleModal';
 import Badge from 'material-ui/Badge';
 import Divider from 'material-ui/Divider';
+import CustomShapeBarChart from '../customShapeBarChart/customShapeBarChart'
 import './ControlledExpansionPanels.css';
 
 
@@ -88,27 +89,33 @@ class ControlledExpansionPanels extends React.Component {
                 <Typography type='caption' align='left'>
                 Bonjour,
                 I wanted to share some very <span>exciting</span> news about our <span>organization</span> in Asia Pacific.
-                As I told you a few months ago during the <span>100 Days</span> WebEx, we launched a country leadership model in Greater China, managed through a <span>Groupe Leadership Team</span> (GLT) and led by <span>Loris Nold</span> as Executive Sponsor.
+                As I told you a few months ago during the <span>100 Days</span> WebEx, we launched a country leadership model in Greater China, managed through a <span>Groupe Leadership Team</span> (GLT) and led by <span>Loris Nold</span> as Executive Sponsor and led by <span>Loris Nold</span> as Executive Sponsor.
                 <br/><br />
                 </Typography>
                 <Divider />
-                <Typography type='body2' align='left' className='sub-header'>Word Occurances:</Typography>
-                <div className="badge">
-                  <Badge color="primary" badgeContent={1} className={classes.margin}>
-                    <Typography type='caption' align='left' className={classes.padding}>exciting</Typography>
-                  </Badge>
-                  <Badge color="primary" badgeContent={1} className={classes.margin}>
-                    <Typography type='caption' align='left' className={classes.padding}>organization</Typography>
-                  </Badge>
-                  <Badge color="primary" badgeContent={1} className={classes.margin}>
-                    <Typography type='caption' align='left' className={classes.padding}>100 Days</Typography>
-                  </Badge>
-                  <Badge color="primary" badgeContent={1} className={classes.margin}>
-                    <Typography type='caption' align='left' className={classes.padding}>Groupe Leadership Team</Typography>
-                  </Badge>
-                  <Badge color="primary" badgeContent={2} className={classes.margin}>
-                    <Typography type='caption' align='left' className={classes.padding}> Loris Nold</Typography>
-                  </Badge>
+                <div className='more-info-container'>
+                  <div className="badge">
+                    <Typography type='body2' align='left' className='sub-header'>Word Occurances:</Typography>
+                    <Badge color="primary" badgeContent={1} className={classes.margin}>
+                      <Typography type='caption' align='left' className={classes.padding}>exciting</Typography>
+                    </Badge>
+                    <Badge color="primary" badgeContent={1} className={classes.margin}>
+                      <Typography type='caption' align='left' className={classes.padding}>organization</Typography>
+                    </Badge>
+                    <Badge color="primary" badgeContent={1} className={classes.margin}>
+                      <Typography type='caption' align='left' className={classes.padding}>100 Days</Typography>
+                    </Badge>
+                    <Badge color="primary" badgeContent={1} className={classes.margin}>
+                      <Typography type='caption' align='left' className={classes.padding}>Groupe Leadership Team</Typography>
+                    </Badge>
+                    <Badge color="primary" badgeContent={2} className={classes.margin}>
+                      <Typography type='caption' align='left' className={classes.padding}> Loris Nold</Typography>
+                    </Badge>
+                  </div>
+                  <div className="graph">
+                    <Typography type='body2' align='left' className='sub-header'>Weights for each word:</Typography>
+                    <CustomShapeBarChart />
+                  </div>
                 </div>
                 <SimpleModal />
               </div>

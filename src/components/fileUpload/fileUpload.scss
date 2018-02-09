@@ -58,11 +58,6 @@
   .panel-details {
     margin-left: 53px;
 
-    & > .sub-header {
-      margin: 15px 0px 5px 0px;
-      text-decoration: underline;
-    }
-
     & > span {
       font-size: 0.85rem;
       span {
@@ -82,19 +77,50 @@
         font-weight: bolder;
       }
     }
-    & > .badge {
-      margin: 9px -3px 0px -30px;
-      & > span {
-        p {
-          font-size: 0.75rem;
+    & > .more-info-container {
+      & > .graph {
+        display: inline-block;
+        width: 60%;
+        float: right;
+        padding-top: 25px;
+
+        & > .sub-header {
+          margin: 2px 0px 28px 31px;
+          text-decoration: underline;
         }
-        & > span:last-child {
-          background-color: $primary-color;
-          color: #fff;
-          top: -11px;
-          width: 19px;
-          right: -4px;
-          height: 19px;
+
+        & > .recharts-wrapper {
+          .recharts-text.recharts-label {
+            & > tspan {
+              stroke: #000;
+              fill: #fff;
+            }
+          }
+        }
+      }
+      & > .badge {
+        display: inline-block;
+        margin: 30px 27px 26px -6px;
+        width: 35%;
+        float: left;
+
+        & > .sub-header {
+          margin: 2px 0px 28px 31px;
+          text-decoration: underline;
+        }
+
+        & > span {
+          p {
+            font-size: 0.75rem;
+          }
+          & > span:last-child {
+            background-color: $primary-color;
+            color: #fff;
+            top: -11px;
+            width: 19px;
+            right: -4px;
+            height: 19px;
+          }
         }
       }
     }

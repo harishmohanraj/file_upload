@@ -60,9 +60,6 @@ body {
     padding-top: 30px; }
   .paper .panel-details {
     margin-left: 53px; }
-    .paper .panel-details > .sub-header {
-      margin: 15px 0px 5px 0px;
-      text-decoration: underline; }
     .paper .panel-details > span {
       font-size: 0.85rem; }
       .paper .panel-details > span span {
@@ -76,11 +73,28 @@ body {
         font-size: 0.72rem;
         text-decoration: underline;
         font-weight: bolder; }
-    .paper .panel-details > .badge {
-      margin: 9px -3px 0px -30px; }
-      .paper .panel-details > .badge > span p {
+    .paper .panel-details > .more-info-container > .graph {
+      display: inline-block;
+      width: 60%;
+      float: right;
+      padding-top: 25px; }
+      .paper .panel-details > .more-info-container > .graph > .sub-header {
+        margin: 2px 0px 28px 31px;
+        text-decoration: underline; }
+      .paper .panel-details > .more-info-container > .graph > .recharts-wrapper .recharts-text.recharts-label > tspan {
+        stroke: #000;
+        fill: #fff; }
+    .paper .panel-details > .more-info-container > .badge {
+      display: inline-block;
+      margin: 30px 27px 26px -6px;
+      width: 35%;
+      float: left; }
+      .paper .panel-details > .more-info-container > .badge > .sub-header {
+        margin: 2px 0px 28px 31px;
+        text-decoration: underline; }
+      .paper .panel-details > .more-info-container > .badge > span p {
         font-size: 0.75rem; }
-      .paper .panel-details > .badge > span > span:last-child {
+      .paper .panel-details > .more-info-container > .badge > span > span:last-child {
         background-color: #006A4D;
         color: #fff;
         top: -11px;
