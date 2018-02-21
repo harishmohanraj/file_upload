@@ -1,0 +1,308 @@
+{
+	"emailDetails": [{
+			"email_subject": "Enq ref: 12345678   Missing Bank Statement - ABC Fund",
+			"email_body": "Hi For reference I attach copy earlier statement I appear missing statement account periodfrom The balance account point I would like copy statement covers period please Thanks Regards Mich",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "CBO-2291811 Statement needed",
+			"email_body": "Please could help us identify Credit account per NCC Account Sort code Account On th Jun credit account ref BBCHGAA please could provide us details allow us investigation move money correct account Kind Regards Mandy",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "DWF LLP",
+			"email_body": "Sort Code Account number Hi Please tell bank account following payment came K Paul Many thanks Kind regards Beck",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "ABC Industries - Bank Statement Queries",
+			"email_body": "Hi Lloyds Banking Please I query followingentries bank account record transactions Sort Code Bank Account Statement Date Amount dr NarrativeOnline transaction Statement Date Amount dr NarrativeOnlinePremier tra Statement Date Amount dr NarrativeOnline tra service Kind Regards Emre",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "URGENT Statements",
+			"email_body": "Hi team Spoke Peter morning I access closing ledger balances Thurs th May issue Lloyds link unable gain access statements Can please provide bank statements th th May opening statement today following bank accounts ABC BL CBA PLC ABC USD ABC EUR John Lewis",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "CBO-1234567 / 123456789 / DDA No. - 0123456. Amount GBP551.10, GBP220, GBP711",
+			"email_body": "Hi team Request kindly provide update Debit GBP Requested information Query reference Thanks Regards Pankaj",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Copy Invoice",
+			"email_body": "Dear sirs Please email copy invoice debited account statement attached Many thanks Cat",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Payment in query",
+			"email_body": "Good day I hope well May kind confirm receipt relates please Is rebate payment Corporate card based percentage usage GBP ABC QA MN LONDON Jun FFLOW FFLOW LLOYDS BANK TFR CARD REBATE Thank Kind regards Rob",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "ABC sales limited",
+			"email_body": "Good Morning Please could I account closing statements accounts closed Account Name Account Number Sort Code ABC sales limited ABC sales limited ABC sales limited ABC sales limited ABC sales limited Thanks Mandy",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Loan Account Statement Request",
+			"email_body": "Good Morning I attempted call corporate telephone service unable get security statements hold account old Please I request PDF statement CBCA Trust loan account current day The account details follows Sort Code Account Number Account Name CBCA Trust If anything require please let know Thank Kind regards",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Statement required",
+			"email_body": "Hi Can please send statement period May till May closed account Regards Kunal",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "£210 credited in CBO-8819111",
+			"email_body": "Hi Phil In account sort code account number recived amount We want undertand Can please let know details Regards Anne",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Statement needed for feb 2015",
+			"email_body": "Hi team I need feb statement account Please send ASAP Regards Kim",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "£2021 on 24-Jun to ACC no.091121111",
+			"email_body": "Hi In account sort code account number recived amount It decstiption paypal payment I believe need clarification transaction Regards Anne",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Account statement required",
+			"email_body": "Hi Anne As spoke I need statement period till Thanks Jesus",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "VBB LTD - £190 credited",
+			"email_body": "Hi Andy There unkown amount credited account Can please send details transaction",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Loan statement ",
+			"email_body": "Hello I need loan statement account period Jun till Apr Please sent PDF Thanks Phil",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Invoice of Ref-21144111",
+			"email_body": "Hi I need information transaction refernece number date Jun The amount credit",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "CBO-1234567 / 123456789 / DDA No. - 9810011 Amount GBP120",
+			"email_body": "Hi team Request kindly provide update Debit GBP Requested information Query reference Thanks Regards Pankaj",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "Unknown credit in account",
+			"email_body": "Hi received amount account May dont recognize Can please let us know came Thanks Scott",
+			"predicted_class": "Credit and account statements"
+		},
+		{
+			"email_subject": "DDA óñ 5474113 Amount GBP450 value Date - 12th May 2017",
+			"email_body": "Hi TeamWe received return GBP value date th May DDA The sort code The account number Request kindly provide us swift details reasons returnThanks RegardsSS",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Direct Debit Credit query",
+			"email_body": "Our Direct Debit Account Sort code Account On th Jun debit account ref BBCHGAA please could provide us details allow us investigation Kind Regards Mandy",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Send data from MFP11682801 19/05/2017 16:34",
+			"email_body": "Dear JohnFurther telephone conversation please find attached copy BTC paying cheque sum yet credited client accountKind regards Tejas",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Standing order instruction",
+			"email_body": "Dear SirsAttached new standing order instruction Kindly confirm actionedThanks Kind regards Lisa",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Direct Debit Credit query",
+			"email_body": "Please could help us identify Credit account per NCC Direct Debit Account Sort code Account On th Jun credit account ref AACHGCC please could provide us details allow us investigation move money correct account",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Cancellation of DD",
+			"email_body": "Good afternoonPlease could cancel following DD immediate effectAccount name ABC CompanySort codeAccount number Beneficiary XYZ Ins LtdDate DDthReference EL",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Standing Orders T MNC & J Kenny",
+			"email_body": "HiPlease see attached The standing order placed th every month processed Can please investigateMany thanks Sally",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "CBO-1484546 : Bacs Trace Request",
+			"email_body": "HelloIve attached Bacs Proof Request FormCan bacs trace done figure details therein Regards John",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "BACS proof 299638556",
+			"email_body": "HiKindly arrange BACS proof attached payment Thanks MM",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Bacs",
+			"email_body": "Good MorningCould bacs forecast please account forstMay Kind Regards Ryan",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "BACSRECALL FROM",
+			"email_body": "Dear Client ServicingPlease BACS recall processed pm hit cut pleaseAny queries please call using details form Kind Regards Black",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Direct debit cancellation",
+			"email_body": "Hello Can please cancel DD account setup th every month",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Direct debit returned",
+			"email_body": "Good morning The direct debited setup account rd every month processed cancellation next day Can please explain happened Thanks Caroline",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Cancel DD",
+			"email_body": "Please cancel direct debits account closing accoutn shortly",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "BACS recall",
+			"email_body": "Hello Can please recall BACS Details attached Contact need info Thanks Matt",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Direct debit query",
+			"email_body": "Can please send deriect debits associated closed account",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "DD not processed",
+			"email_body": "Hi Pete One DD account debited th every month processed Jun Can please let know Thanks Kim",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Need info on BACS ",
+			"email_body": "HiKindly arrange BACS proof attached payment",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "CBO-1238781 DD cancellation",
+			"email_body": "Please cancel DD processed th everymonth account",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "DD cancelllation for the account 98719911",
+			"email_body": "Hi Servicing team We want cancel direct debit processed th every month account",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Bacs forecast",
+			"email_body": "Hello Could bacs forecast please account st Jul Kind Regards Mandy",
+			"predicted_class": "Direct debit and Bacs"
+		},
+		{
+			"email_subject": "Closure of Accounts",
+			"email_body": "Please find attached closures accounts clients",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "ACME Phone LTD Manchester Branch - bank account closure  12345-K2C3B9",
+			"email_body": "Hi Matt We would like close GBP account ACME Phone LTD Manchester Branch Lloyds asap Attached account closure instruction sent courier soon Can advise possible account closed month end Appreciate help Thanks Regards Ron",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Closing account 21312311",
+			"email_body": "Please close accounts listed Please send remaining funds accounts check address reject requests transactions accountsSort code Account number Please provide written confirmation account closedIf questions please contact phone number belowThank youPhil",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "ABC Industries - Account closures",
+			"email_body": "I writing inform closing account bank Please close following account listed belowSort code Account Number This letter also confirms I deactivated automatic recurring transactions account",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "30-00-01 819188111 - Closing account",
+			"email_body": "Please close account Please transfer balance account Thanks Ron",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "BNB accountants ",
+			"email_body": "HelloCan please close account belowSort code Acc No Please cancel direct debits well We moved funs alreadyThanksTim",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "AKN Industries - Close secondary account",
+			"email_body": "Hi Servicing team Please go ahead close account discussed I sendong th documents shortlyThanksDD",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Closing multiple accounts",
+			"email_body": "Hi RonAs discussed Please close following accounts Please find attached document signed parties",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Closing account - RCA metals",
+			"email_body": "HiPlease find attached details account closed All funds moved wellThanksTom",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Closures",
+			"email_body": "Hi Servicing teamWe decided close accounts Manchester Can please close accountsSortcode Account number Sortcode Accoutn number ThanksBoring",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "TNT LTD accounts",
+			"email_body": "HelloPlease find attached form closing accounts We accounts closed All funds transferred accounts alreadyThanksKillme",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "TBT industries account closures",
+			"email_body": "I writing inform closing account bank Please close following account listed belowSort code Account Number",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "CB0-11231231 Closing account 30-00-01 1181911",
+			"email_body": "Hi NeilAs spoke phone please close account I moved funds accountThanksMu",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Accounts to close",
+			"email_body": "Please find attached forms close accounts related BNK limited ThanksKL",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Multiple accounts closure",
+			"email_body": "Hi TimAs explained call please go ahed closeSortcode Account number Sortcode Accoutn number ThanksVery Boring",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Moving funds to other account",
+			"email_body": "Hey Johnwe want move money account please go ahead close Attached forms",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Closing operations in birmingham",
+			"email_body": "HiWe closing operations birmingham We want close accounts related branchI haave attached documents needed account infoThanksKillme immediately",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Moving operations to london",
+			"email_body": "HiAs moving operations manchester london Please move funds close account manchesterThanksIam Dead",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Unwanted accounts",
+			"email_body": "HiWe closing excess accounts Please close following accountsSortcode Account number Sortcode Accoutn number ThanksZombie",
+			"predicted_class": "Account closures"
+		},
+		{
+			"email_subject": "Closing the last account in Manchester",
+			"email_body": "HiOne account connected Manchester operations closed yet Can please close Sort code Account Number RegardsWhite Walker",
+			"predicted_class": "Account closures"
+		}
+	]
+}
