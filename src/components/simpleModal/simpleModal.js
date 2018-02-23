@@ -53,7 +53,7 @@ class SimpleModal extends React.Component {
 
     return (
       <div>
-        <Button color="primary" className={classes.button} onClick={this.handleOpen}>List all word mappings</Button>
+        {/*<Button color="primary" className={classes.button} onClick={this.handleOpen}>List all word mappings</Button>*/}
         <Modal
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
