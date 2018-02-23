@@ -67,12 +67,12 @@ class fileUpload extends Component {
     this.setState({
       showSpinner: true
      })
-     setTimeout(() => {
+    setTimeout(() => {
       this.setState({
         showSpinner: false,
         isLoaded: true
        })
-     }, 2000)
+     }, 2500)
    }
  }
 

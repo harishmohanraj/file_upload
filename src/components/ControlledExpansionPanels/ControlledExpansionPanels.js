@@ -11,8 +11,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SimpleModal from '../simpleModal/simpleModal';
 import Badge from 'material-ui/Badge';
 import Divider from 'material-ui/Divider';
+import axios from 'axios';
 import CustomShapeBarChart from '../customShapeBarChart/customShapeBarChart'
+import {emailData} from '../../staticData/response.js';
+import {convertSetIntoObj} from '../../utils/helperFunctions.js'
 import './ControlledExpansionPanels.css';
+
 
 
 const styles = theme => ({
@@ -20,10 +24,11 @@ const styles = theme => ({
     width: '100%',
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(13),
+    textAlign: 'left'
   },
   secondaryHeading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(13),
     color: theme.palette.text.secondary,
   },
   icon: {
@@ -67,6 +72,53 @@ class ControlledExpansionPanels extends React.Component {
       expanded: expanded ? panel : false,
     });
   };
+
+  renderMapResults(classes, expanded) {
+    let arr = []
+    Object.keys(emailData.email_subject).map((key, index) => {
+      let highlightedWords = convertSetIntoObj(emailData.keywords_for_prediction[index]);
+      arr.push(
+        <ExpansionPanel expanded={expanded === 'panel'+index} onChange={this.handleChange('panel'+index)}>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+              <div className={classes.column}>
+                <Typography className={classes.heading}>{emailData.email_subject[index]}</Typography>
+              </div>
+              <div className={classes.column}>
+                <Typography className={classes.secondaryHeading}>{emailData.predicted_class[index]}</Typography>
+              </div>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <div className='panel-details'>
+                <Typography type='caption' align='left'>
+                {emailData.email_body[index]}
+                <br/><br />
+                </Typography>
+                <Divider />
+                  <div className='more-info-container'>
+                  <div className="badge">
+                    <Typography type='body2' align='left' className='sub-header'>Word Occurances:</Typography>
+                      {Object.keys(highlightedWords).map((key ,index) => {
+                          return (
+                            <Badge color="primary" badgeContent={1} className={classes.margin}>
+                              <Typography type='caption' align='left' className={classes.padding}>{key}</Typography>
+                            </Badge>
+                          )
+                      })}
+                  </div>
+                  <div className="graph">
+                    <Typography type='body2' align='left' className='sub-header'>Weights for each word:</Typography>
+                    <CustomShapeBarChart data = {highlightedWords}/>
+                  </div>
+                </div>
+                <SimpleModal />
+              </div>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+      )
+    })
+    return arr;
+  }
+
 
   renderResults(classes, expanded) {
     let arr = []
@@ -133,7 +185,7 @@ class ControlledExpansionPanels extends React.Component {
     return (
       <div className='results-component'>
         <MuiThemeProvider className={classes.root}>
-          {this.renderResults(classes, expanded)}
+          {this.renderMapResults(classes, expanded)}
         </MuiThemeProvider>
       </div>
     );
