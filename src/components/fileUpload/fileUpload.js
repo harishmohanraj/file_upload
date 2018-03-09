@@ -14,6 +14,9 @@ import Delete from 'material-ui-icons/Delete';
 
 import './fileUpload.css';
 
+var request = require('superagent');
+var apiEndPoint = "http://10.240.191.121:5000/api/email/predict";
+
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
@@ -66,13 +69,33 @@ class fileUpload extends Component {
    if(this.state.filesPreview.length) {
     this.setState({
       showSpinner: true
-     })
-    setTimeout(() => {
-      this.setState({
-        showSpinner: false,
-        isLoaded: true
-       })
-     }, 2500)
+    })
+     var filesArray = this.state.filesToBeSent;
+     request
+      .post(apiEndPoint)
+      .set('Content-Type', 'multipart/form-data')
+      .send(filesArray[0])
+      .then(function(res) {
+        console.log(JSON.stringify(res.body));
+        this.setState({
+          showSpinner: false,
+          isLoaded: true
+        })
+      });
+    //  var req = request.post(apiEndPoint);
+    //  req.attach(filesArray[0]);
+    //  req.end(function(err,res){
+    //   if(err){
+    //     console.log("error ocurred");
+    //   }
+    //   console.log("res",res);
+    //   });
+    // setTimeout(() => {
+      // this.setState({
+      //   showSpinner: false,
+      //   isLoaded: true
+      //  })
+    //  }, 2500)
    }
  }
 
